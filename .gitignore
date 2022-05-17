@@ -1,0 +1,8 @@
+SCRIBBLE
+*.txt
+*.egg
+*.log
+*.exe
+release.cmd
+builds/
+.local/

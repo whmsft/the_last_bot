@@ -1,0 +1,2 @@
+*.wren linguist-language=C
+*.tic linguist-language=Lua
