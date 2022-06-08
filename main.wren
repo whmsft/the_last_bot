@@ -1,4 +1,5 @@
 import "dome" for Window
+import "input" for Keyboard
 import "graphics" for Canvas, Color, Font
 
 class Player {
@@ -19,9 +20,9 @@ class Player {
 
 class GAME {
 	construct new {}
-	init() {}
-	update() {}
-	draw(alpha) {}
+	init() {sprite = Player.new()}
+	update() {sprite.update()}
+	draw(alpha) {sprite.draw()}
 }
 
 var Game = GAME.new()
