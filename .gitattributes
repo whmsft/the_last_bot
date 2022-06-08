@@ -1,2 +1,6 @@
-*.wren linguist-language=C
-*.tic linguist-language=Lua
+*.wren linguist-language=Text
+*.wren linguist-vendored=false
+*.wren linguist-generated=false
+*.wren linguist-documentation=false
+*.wren linguist-detectable=true
+LICENSE linguist-detectable=false
