@@ -14,7 +14,7 @@ class Player {
 		_y = 200
 	}
 	update() {
-		if (Keyboard.isKeyDown("up")) {_yvel = 5}
+		if (Keyboard.isKeyDown("up")) {_yvel = 10}
 		_x = x+xvel
 		_y = y-yvel
 		if (y != 200) {_yvel = yvel - 1}
@@ -22,17 +22,25 @@ class Player {
 			_y = 200
 			_yvel = 0
 		}
+		if (y <= 0) {
+			_y = 0
+			_yvel = -1
+		}
 	}
 	draw() {
 		Canvas.cls()
-		Canvas.print(yvel.toString, 10,10, Color.white)
 		Canvas.rectfill(x, y, 20, 20, Color.white)
 	}
 }
 
 class game {
 	construct new() {}
-	init() {_sprite = Player.new()}
+	init() {
+		Window.title = "last_bot.wren"
+		Canvas.resize(640,360)
+		Window.resize(640,360)
+		_sprite = Player.new()
+	}
 	update() {_sprite.update()}
 	draw(alpha) {_sprite.draw()}
 }
